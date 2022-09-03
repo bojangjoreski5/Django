@@ -1,0 +1,163 @@
+<head>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<style type="text/css">
+	#nav{
+		background: orange;
+		height: 180px;	
+	}
+	#img{
+		width: 150px;
+		margin: 15px;
+		margin-left: 40px;
+	}
+	#ttl{
+		background: darkturquoise;
+    	position: relative;
+    	width: 730px;
+    	height: 63px;
+    	top: -110px;
+    	left: 403px;
+    	border-radius: 40px;
+	}
+	#ttln{
+		width: 136px;
+    	position: relative;
+    	left: 300px;
+    	color: white;
+    	font-size: 19px;
+    	font-weight: 900;
+	}
+	#navbar{
+		background: darkturquoise;
+		position: relative;
+    	bottom: 80px;
+    	height: 46px;
+    	width: 1516px;
+    	margin: 9px;
+	}
+	#nav1{
+		background: orange;
+    	width: 270px;
+    	position: relative;
+    	bottom: -5px;
+    	height: 35px;
+    	border-radius: 10px;
+    	left: 23px;
+    	color: white;
+	}
+	#nav2{
+		background: orange;
+    	width: 320px;
+    	position: relative;
+    	bottom: 30px;
+    	height: 35px;
+    	border-radius: 10px;
+    	left: 345px;
+    	color: white;
+	}
+	#nav3{
+		background: orange;
+    	width: 350px;
+    	position: relative;
+    	bottom: 65px;
+    	height: 35px;
+    	left: 721px;
+    	border-radius: 10px;
+    	color: white;
+	}
+	#nav4{
+	    background: orange;
+    	width: 360px;
+    	position: relative;
+    	left: 1133px;
+    	bottom: 100px;
+    	height: 35px;
+    	border-radius: 10px;
+    	color: white;
+	}
+	#boddy{
+		background: orange;
+		position: relative;
+    	margin: 45px;
+    	border-radius: 100px 100px 1px 1px;
+    	height: 300px;
+	}
+		#ask{
+		background: aqua;
+    	position: absolute;
+    	bottom: 30px;
+    	width: 240px;
+    	height: 125px;
+    	left: 200px;
+		}
+
+		#btn{
+			background: red;
+    		border-radius: 20px;
+    		width: 105px;
+    		height: 35px;
+    		position: relative;
+    		left: 110px;
+    		top: 7px;
+    		border: double;
+		}
+		#img1{
+			position: relative;
+    		left: 1020px;
+    		bottom: 25px;
+    		height: 140px;
+    		width: 210px;
+		}
+	
+	}
+</style>
+</head>
+<body>
+	<div id="nav">
+		{% load static %}
+		<img src="{% static "Projectapp/media/img1.jpg" %}" alt="home" / id="img">
+		<!-- <img src="{{MEDIA_URL}}/img1.jpg" >  -->
+		<div id="ttl">
+		<p id="ttln">
+			Covid-19
+			Корона вирус
+		</p>
+	</div>
+
+	<div id="navbar">
+		<div id="nav1"><p style="text-align: center;"><a href="{% url 'home' %}">Што е Covid-19</a></p></div>
+		<div id="nav2"><p style="text-align: center;">
+			<a href="{% url 'page1' %}">Како да се заштитиме од Covid-19</a></p></div>
+		<div id="nav3"><p style="text-align: center;"><a href="{% url 'page2' %}">Кои се симптомите на Covid-19</a></p></div>
+		<div id="nav4"><p style="text-align: center;">
+			<a href="{% url 'page3' %}">Каде да се обратиме доколку имаме симптоми</a>
+		</p></div>
+	</div>
+	</div>
+	<div id="boddy">
+		<p style="position: relative; top: 75px; left: 50px; font-weight: 800;">
+			Како да се заштитиме од заболување со Covid-19?
+		</p>
+		<p style="position: relative; top: 75px; left:18px; margin-right: 20px; font-style: italic;">
+			* Мијте ги рацете често, користејќи сапун и вода, подолго од 1 минута, внимавајќи да ги опфатите сите делови од дланката и прстите.<br>
+			* Избегнувајте близок контакт со болни лица или лица кои се вратиле од патување од земја со висок или среден ризик.<br>
+			* Користете средства за дезинфекција или алкохолни марамчиња.<br>
+			* При кашлање или кивање покријтеги носот и устата со марамче за еднократна употреба и веднаш потоа фрлете го во на безбедно место. Доколку немате марамче, покријтеги носот и устата со рака свиркана во лактот.<br>
+			* Следете ги препораките на Министерството за здраство и редовно информирајте се од надлежните институции за најновите вести и насоки.
+		</p>
+
+	</div>
+	<div id="down">
+		<div id="ask">
+			<p style="position: relative; left: 20px; top: 15px; color: red; font-weight: 700;">
+				Дали научивме како да се заштитиме од Covid-19?
+			</p>
+			<button id="btn"><a href="{% url 'page4' %}">Квиз</a></button>	
+		</div>
+		{% load static %}
+		<img src="{% static "Projectapp/media/img2.png" %}" alt="home" / id="img1">
+	</div>
+</body>
